@@ -7,6 +7,7 @@ import {
 import Header from '../../components/Header';
 import AdminLogin from '../Admin-Login';
 import AdminDashboard from '../Admin-Dashboard';
+import Notification from '../Notifications';
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
       <Router>
         <Header />
         <Switch>
+          <Route exact path="/admin/notification" component={Notification} />
           <Route exact path="/admin/login" component={AdminLogin} />
           <Route exact path="/admin/dashboard" component={AdminDashboard} />
         </Switch>

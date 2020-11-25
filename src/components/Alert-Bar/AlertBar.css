@@ -1,0 +1,25 @@
+.AlertBar {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 1.5%;
+  background-color: #fff;
+  color: black;
+}
+
+.AlertBar p {
+  display: inline-block;
+}
+
+.name_container, .request_container, .amount_container {
+  width: 25%;
+  text-align: left;
+}
+
+.alert_request {
+  font-size: 1.1em;
+  font-weight: 600;
+}
+
+.AlertBar p:nth-child(4) {
+  color: #285d5b;
+}
