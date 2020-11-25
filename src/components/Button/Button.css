@@ -1,0 +1,17 @@
+.Button .form_button {
+  display: inline-block;
+  font-size: 1.3em;
+  color: #fff;
+  background-color: #4daaa7;
+  width: 40%;
+  padding: 13px;
+  border: 2px solid #fff;
+  border-radius: 50px;
+  transition: 0.5s;
+}
+
+.Button .form_button:hover {
+  cursor: pointer;
+  background-color: #285d5b;
+  width: 50%;
+}

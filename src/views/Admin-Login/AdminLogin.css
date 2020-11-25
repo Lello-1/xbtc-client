@@ -1,0 +1,42 @@
+.admin_login_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #F3F3F5;
+  padding-top: 100px;
+  height: 100vh;
+}
+
+.admin_login_container form {
+  text-align: center;
+  width: 40%;
+  border-radius: 5px;
+  background-color: #fff;
+  padding: 50px;
+}
+
+.admin_login_container h3 {
+  color: #4DAAA7;
+  font-size: 2em;
+  font-weight: 700;
+  margin-bottom: 50px;
+}
+
+.admin_login_container input {
+  display: block;
+  width: 100%;
+  font-size: 1.1em;
+  border: none;
+  background-color: #F3F3F5;
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.admin_login_container input:nth-child(3) {
+  margin-bottom: 50px;
+}
+
+.admin_login_container input::placeholder {
+  color: #b9b9b9;
+}
