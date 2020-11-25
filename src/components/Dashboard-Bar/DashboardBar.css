@@ -1,0 +1,67 @@
+.dashboard_bar_container, .secondary_bar_container {
+  background-color: #fff;
+  padding: 20px;
+  height: 100%;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.dashboard_bar_container h3, .secondary_bar_container h3 {
+  font-size: 1.5em;
+  font-weight: 400;
+  margin-bottom: 10%;
+}
+
+.dashboard_bar_container p {
+  display: inline-block;
+  font-size: 1.8em;
+  font-weight: 700;
+}
+
+.text_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 8%;
+}
+
+.text_container img {
+  width: 8%;
+  margin-right: 3%;
+}
+
+.dashboard_bar_container .dollar_sign {
+  margin-right: 8%;
+}
+
+.company_input_container p {
+  display: inline-block;
+}
+
+.company_title {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3%;
+}
+
+.company_input_container input {
+  display: inline;
+}
+
+.input_container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 3%;
+}
+
+.secondary_bar_container .Button {
+  display: inline-flex;
+  width: 40%;
+}
+
+.secondary_bar_container .Button .form_button {
+  font-size: 1.1em;
+  padding: 5px;
+  width: 100%;
+}

@@ -1,0 +1,32 @@
+.DashboardPackage {
+  
+}
+
+.DashboardPackage h5 {
+  text-align: left;
+  font-size: 1.3em;
+  font-weight: 400;
+  margin-bottom: 7.5%;
+}
+
+.package_content_container {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  row-gap: 30px;
+  column-gap: 5%;
+}
+
+.package_content_container p {
+  text-align: left;
+  font-size: 1.6em;
+  font-weight: 600;
+}
+
+.package_content_container .package_dollar_sign {
+  text-align: right;
+}
+
+.package_content_container img {
+  width: 17%;
+  float: right;
+}

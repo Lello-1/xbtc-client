@@ -1,6 +1,6 @@
 import './Button.css';
 
-const Button = ({ href, ghostButton, ghostButtonContent, formButton }) => {
+const Button = ({ formButton }) => {
 
   return (
     <div className="Button">

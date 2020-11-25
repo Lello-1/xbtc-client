@@ -6,6 +6,7 @@ import {
 } from 'react-router-dom';
 import Header from '../../components/Header';
 import AdminLogin from '../Admin-Login';
+import AdminDashboard from '../Admin-Dashboard';
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
         <Header />
         <Switch>
           <Route exact path="/admin/login" component={AdminLogin} />
+          <Route exact path="/admin/dashboard" component={AdminDashboard} />
         </Switch>
       </Router>
     </div>
