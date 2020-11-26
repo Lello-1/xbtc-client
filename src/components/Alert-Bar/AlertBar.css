@@ -4,6 +4,7 @@
   padding: 1.5%;
   background-color: #fff;
   color: black;
+  box-shadow: 0 7px 10px -10px #777;
 }
 
 .AlertBar p {

@@ -1,0 +1,44 @@
+
+/* DEPOSIT */
+.deposit_request {
+  display: grid;
+  grid-template-columns: 20% 35% 25% 20%;
+  margin-bottom: 2%;
+}
+
+.deposit_request p {
+  display: flex;
+  align-items: center;
+  color: #4daaa7;
+}
+
+.deposit_request p:nth-child(2):hover {
+  cursor: pointer;
+}
+
+.TransactionRequest .Button .form_button {
+  width: 90%;
+  font-size: 1em;
+  padding: 5px;
+}
+
+.TransactionRequest .Button .form_button:hover {
+  width: 100%;
+}
+
+/* WITHDRAW */
+.withdraw_request {
+  display: grid;
+  grid-template-columns: 15% 30% 15% 20% 20%;
+  margin-bottom: 2%;
+}
+
+.withdraw_request p {
+  display: flex;
+  align-items: center;
+  color: maroon;
+}
+
+.withdraw_request p:nth-child(2):hover {
+  cursor: pointer;
+}

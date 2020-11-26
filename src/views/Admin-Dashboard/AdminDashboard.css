@@ -22,6 +22,7 @@
   background-color: #fff;
   border-radius: 5px;
   text-align: center;
+  box-shadow: 0 7px 10px -10px #777;
 }
 
 .packages_bar h3 {

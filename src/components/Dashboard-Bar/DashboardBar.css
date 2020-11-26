@@ -4,6 +4,7 @@
   height: 100%;
   border-radius: 5px;
   text-align: center;
+  box-shadow: 0 7px 10px -10px #777;
 }
 
 .dashboard_bar_container h3, .secondary_bar_container h3 {
