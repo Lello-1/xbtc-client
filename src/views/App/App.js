@@ -9,6 +9,8 @@ import AdminLogin from '../Admin-Login';
 import AdminDashboard from '../Admin-Dashboard';
 import Notification from '../Notifications';
 import Transactions from '../Transactions';
+import UserView from '../User-View';
+import Mastersheet from '../Mastersheet/Mastersheet';
 
 const App = () => {
   return (
@@ -16,10 +18,12 @@ const App = () => {
       <Router>
         <Header />
         <Switch>
+          <Route exact path="/admin/mastersheet" component={Mastersheet} />
           <Route exact path="/admin/transactions" component={Transactions} />
           <Route exact path="/admin/notification" component={Notification} />
           <Route exact path="/admin/login" component={AdminLogin} />
           <Route exact path="/admin/dashboard" component={AdminDashboard} />
+          <Route exact path="/admin/userview/:id" component={UserView} />
         </Switch>
       </Router>
     </div>

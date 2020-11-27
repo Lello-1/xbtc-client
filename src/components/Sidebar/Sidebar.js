@@ -1,12 +1,12 @@
 import './Sidebar.css';
 
-const Sidebar = () => {
+const Sidebar = ({ dashboard, transactions, mastersheet }) => {
   return (
     <div className="Sidebar">
-      <a className="dashboard_link" href="/admin/dashboard">Dashboard</a>
-      <a href="/admin/mastershee">Mastersheet</a>
-      <a href="/admin/transactions">Transactions</a>
-      <a href="/logou">Logout</a>
+      <a className={`dashboard_link ${dashboard}`} href="/admin/dashboard">Dashboard</a>
+      <a className={`${mastersheet}`} href="/admin/mastersheet">Mastersheet</a>
+      <a className={`${transactions}`} href="/admin/transactions">Transactions</a>
+      <a href="/logout">Logout</a>
 
       <footer>
         <small>&copy; Copyright 2020 XBTC. All Rights Reserved</small>

@@ -17,8 +17,8 @@
 }
 
 .TransactionRequest .Button .form_button {
-  width: 90%;
-  font-size: 1em;
+  width: 95%;
+  font-size: 0.9em;
   padding: 5px;
 }
 
@@ -29,7 +29,7 @@
 /* WITHDRAW */
 .withdraw_request {
   display: grid;
-  grid-template-columns: 15% 30% 15% 20% 20%;
+  grid-template-columns: 15% 25% 15% 25% 20%;
   margin-bottom: 2%;
 }
 

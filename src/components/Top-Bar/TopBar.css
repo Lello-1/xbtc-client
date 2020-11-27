@@ -1,0 +1,44 @@
+.TopBar {
+  display: grid;
+  grid-template-columns: 25% 26% 26% 23%;
+  height: 100%;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 7px 10px -10px #777;
+  padding: 1%;
+}
+
+.TopBar img {
+  width: 60%;
+}
+
+.top_half, .bottom_half {
+  display: grid;
+  grid-template-columns: 35% 15% 40%;
+  align-items: center;
+}
+
+.bottom_half p:nth-child(2) {
+  grid-column: 3 / span 1;
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+.first_bar .bottom_half p:nth-child(3) {
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+.top_half p:nth-child(3) {
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+.first_bar, .third_bar, .fourth_bar {
+  display: grid;
+  align-items: center;
+}
+
+.second_bar {
+  margin-top: 6%;
+}

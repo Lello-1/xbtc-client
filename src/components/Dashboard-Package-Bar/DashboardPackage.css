@@ -26,3 +26,15 @@
   width: 17%;
   float: right;
 }
+
+@media only screen and (max-height: 800px) {
+
+  .package_content_container p {
+    font-size: 1.4em;
+  }
+
+  .package_content_container {
+    row-gap: 30%;
+  }
+  
+}

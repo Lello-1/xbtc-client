@@ -51,7 +51,7 @@ class Transactions extends React.Component {
 
     return (
       <div className="Transactions">
-        <Sidebar />
+        <Sidebar transactions="active" />
         <div className="transactions_container">
 
           {this.state.confirm ? 

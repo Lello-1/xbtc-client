@@ -1,12 +1,13 @@
 .AdminDashboard {
   display: grid;
   grid-template-columns: 20% auto;
+  height: 100%;
 }
 
 .admin_dashboard_container {
   display: grid;
   grid-template-columns: 32.3% 32.3% 32.3%;
-  grid-template-rows: 32% 32% 32%;
+  grid-template-rows: 31.5% 31.5% 31.5%;
   row-gap: 2.5%;
   column-gap: 1.5%;
   background-color: #F3F3F5;
@@ -40,4 +41,19 @@
   font-size: 1.5em;
   font-weight: 400;
   margin-bottom: 4%;
+}
+
+.active {
+  border-top: 1px solid white;
+  border-bottom: 1px solid  white;
+}
+
+/* MEDIA QUERIES */
+/* HEIGHT */
+@media only screen and (max-height: 800px) {
+
+  .packages_container {
+    display: grid;
+    grid-template-rows: 27% 27% 27% 14%;
+  }
 }

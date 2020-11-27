@@ -1,0 +1,50 @@
+.ProfileBar {
+  display: grid;
+  grid-template-rows: 33.3% 33.3% 33.3%;
+  height: 100%;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 7px 10px -10px #777;
+  padding: 5%;
+  text-align: center;
+}
+
+.ProfileBar img {
+  width: 75%;
+}
+
+.profile_block_two {
+  padding-top: 10%;
+}
+
+.profile_block_two h5 {
+  font-size: 1.3em;
+}
+
+.profile_block_two p {
+  color: grey;
+  font-size: 0.8em;
+  text-align: left;
+  margin-top: 3%;
+}
+
+.profile_block_two p:nth-child(1) {
+  margin-top: 15%;
+}
+
+.profile_block_three {
+  display: flex;
+  text-align: left;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.profile_block_three h5 {
+  font-size: 1em;
+  color: grey;
+  margin-bottom: 5%;
+}
+
+.profile_block_three p {
+  font-size: 0.9em;
+}

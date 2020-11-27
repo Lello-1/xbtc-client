@@ -2,6 +2,7 @@
   position: fixed;
   width: 100%;
   height: 100px;
+  z-index: 10;
 }
 
 .darkest:before {
@@ -35,7 +36,7 @@
 
 .dark, .darker, .darkest {
   position: relative;
-  height: 100px;
+  height: 80px;
   display: inline-block;
   transform: skew(52deg);
   -webkit-transform: skewX(52deg);
@@ -68,20 +69,20 @@
   text-decoration: none;
 }
 
+.heading h1 {
+  font-size: 1.6em;
+}
+
 .heading_container {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 
 .logo_border {
-  width: 94px;
-  height: 94px;
+  width: 74px;
+  height:74px;
   border: 2px solid #fff;
   padding: 5px;
-}
-
-.logo_x, .logo_btc {
-  margin: 0;
 }
 
 .heading_title, .logo_border {
@@ -89,46 +90,84 @@
 }
 
 .heading_title {
-  padding-top: 14px;
   display: flex;
   justify-content: center;
+  padding-top: 5%;
 }
 
 .header_regular {
-  font-size: 3em;
+  font-size: 2em;
   font-weight: 300;
 }
 
 .header_bold {
-  font-size: 3em;
+  font-size: 2em;
   font-weight: 700;
 }
 
 .header_welcome {
-  font-size: 1.5em;
+  font-size: 1.2em;
   font-weight: 300;
   color: #fff;
   position: absolute;
   left: 50%;
-  top: 30%;
+  top: 35%;
   transform: skew(-52deg);
   -webkit-transform: skewX(-52deg);
 }
 
+/* DROPDOWN */
 .users_dropdown {
   position: absolute;
   left: 10%;
-  top: 30%;
-  font-size: 1.4em;
+  top: 35%;
+  font-size: 1.2em;
   color: #fff;
   transform: skew(-52deg);
   -webkit-transform: skewX(-52deg);
+}
+
+.users_dropdown:hover {
+  font-weight: 700;
+  cursor: pointer;
 }
 
 .users_dropdown strong {
   font-weight: 700;
 }
 
-.dark Bell {
+.dropdown {
+  position: absolute;
+  width: 100%;
+  top: 80px;
+}
+
+.dropdown_headings {
+  display: grid;
+  grid-template-columns: 17% 17% 20% 10% 17%;
+  padding: 0 0 0 5%;
+  height: 65px;
   color: white;
+  background-color: #3F8F8B;
+  font-size: 1em;
+  font-weight: 600;
+  align-items: center;
+}
+
+.check_overflow {
+  overflow: auto;
+  max-height: 82vh;
+}
+
+.check_overflow::-webkit-scrollbar {
+  display: none;
+}
+
+/* MEDIA QUERIES */
+/* HEIGHT */
+
+@media only screen and (min-height: 801px) {
+  .check_overflow {
+    max-height: 80vh;
+  }
 }

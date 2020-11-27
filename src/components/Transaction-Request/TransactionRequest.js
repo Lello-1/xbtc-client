@@ -28,7 +28,7 @@ class TransactionRequest extends React.Component {
         :
         <div className="withdraw_request">
           <p>{this.props.name}</p>
-          <p>{truncateString(this.props.address, 15)}</p>
+          <p>{truncateString(this.props.address, 10)}</p>
           <p>{this.props.type}</p>
           <p>{this.props.amount}</p>
           <Button formButton="Confirm" onClick={this.handleConfirm} />

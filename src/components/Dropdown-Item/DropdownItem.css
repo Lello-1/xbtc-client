@@ -1,0 +1,20 @@
+.DropdownItem {
+  display: grid;
+  grid-template-columns: 3% 16.5% 16.5% 19.6% 9.7% 17%;
+  padding: 0 0 0 2%;
+  color: white;
+  height: 66px;
+  align-items: center;
+}
+
+.DropdownItem:hover {
+  font-weight: 600;
+}
+
+.light_green {
+  background-color: #4daaa7;
+}
+
+.dark_green {
+  background-color: #3F8F8B;
+}

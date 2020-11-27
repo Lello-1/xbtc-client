@@ -9,7 +9,7 @@ const AdminDashboard = () => {
 
   return (
     <div className="AdminDashboard">
-      <Sidebar />
+      <Sidebar dashboard="active" />
       <div className="admin_dashboard_container">
         {data.map((item) => {
           return <DashboardBar bar={true} title={item.title} bitcoin={item.bitcoin} dollar={item.dollar} key={item.title} />
