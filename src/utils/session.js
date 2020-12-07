@@ -1,7 +1,7 @@
-const { REACT_APP_API_ENDPOINT } = process.env;
+const { REACT_APP_BASE_URL } = process.env;
 
 export const signup = admin => (
-  fetch(`${REACT_APP_API_ENDPOINT}/admin/register`, {
+  fetch(`${REACT_APP_BASE_URL}/admin/register`, {
     method: "POST",
     body: JSON.stringify(admin),
     credentials: 'include',
@@ -12,7 +12,7 @@ export const signup = admin => (
 );
 
 export const login = admin => (
-  fetch(`${REACT_APP_API_ENDPOINT}/admin/login`, {
+  fetch(`${REACT_APP_BASE_URL}/admin/login`, {
     method: "POST",
     body: JSON.stringify(admin),
     credentials: 'include',
@@ -23,14 +23,14 @@ export const login = admin => (
 );
 
 export const logout = () => (
-  fetch(`${REACT_APP_API_ENDPOINT}/admin/logout`, {
+  fetch(`${REACT_APP_BASE_URL}/admin/logout`, {
     method: "DELETE",
     credentials: 'include'
   })
 );
 
 export const checkLoggedIn = async () => {
-  const response = await fetch(`https://xbtc-admin-server.herokuapp.com/admin/auth`, {
+  const response = await fetch(`${REACT_APP_BASE_URL}/admin/auth`, {
     credentials: 'include'
   });
 
