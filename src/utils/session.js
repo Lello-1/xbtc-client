@@ -30,7 +30,7 @@ export const logout = () => (
 );
 
 export const checkLoggedIn = async () => {
-  const response = await fetch(`${REACT_APP_API_ENDPOINT}/admin/auth`, {
+  const response = await fetch(`https://xbtc-admin-server.herokuapp.com/admin/auth`, {
     credentials: 'include'
   });
 
