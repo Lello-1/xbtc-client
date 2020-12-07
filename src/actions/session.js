@@ -21,7 +21,6 @@ if (response.ok) {
   return dispatch(receiveErrors(data));
 };
 export const signup = admin => async dispatch => {
-  console.log('HERE: ', admin);
   const response = await apiUtil.signup(admin);
   const data = await response.json();
   

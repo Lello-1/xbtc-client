@@ -1,5 +1,7 @@
+const { API_ENDPOINT } = process.env;
+
 export const signup = admin => (
-  fetch("http://localhost:5000/admin/register", {
+  fetch(`${API_ENDPOINT}/admin/register`, {
     method: "POST",
     body: JSON.stringify(admin),
     credentials: 'include',
@@ -10,7 +12,7 @@ export const signup = admin => (
 );
 
 export const login = admin => (
-  fetch("http://localhost:5000/admin/login", {
+  fetch(`${API_ENDPOINT}/admin/login`, {
     method: "POST",
     body: JSON.stringify(admin),
     credentials: 'include',
@@ -21,14 +23,14 @@ export const login = admin => (
 );
 
 export const logout = () => (
-  fetch("http://localhost:5000/admin/logout", {
+  fetch(`${API_ENDPOINT}/admin/logout`, {
     method: "DELETE",
     credentials: 'include'
   })
 );
 
 export const checkLoggedIn = async () => {
-  const response = await fetch('http://localhost:5000/admin/auth', {
+  const response = await fetch(`${API_ENDPOINT}/admin/auth`, {
     credentials: 'include'
   });
 
