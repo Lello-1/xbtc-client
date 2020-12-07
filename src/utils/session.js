@@ -1,7 +1,7 @@
-const { API_ENDPOINT } = process.env;
+const { REACT_APP_API_ENDPOINT } = process.env;
 
 export const signup = admin => (
-  fetch(`${API_ENDPOINT}/admin/register`, {
+  fetch(`${REACT_APP_API_ENDPOINT}/admin/register`, {
     method: "POST",
     body: JSON.stringify(admin),
     credentials: 'include',
@@ -12,7 +12,7 @@ export const signup = admin => (
 );
 
 export const login = admin => (
-  fetch(`${API_ENDPOINT}/admin/login`, {
+  fetch(`${REACT_APP_API_ENDPOINT}/admin/login`, {
     method: "POST",
     body: JSON.stringify(admin),
     credentials: 'include',
@@ -23,14 +23,14 @@ export const login = admin => (
 );
 
 export const logout = () => (
-  fetch(`${API_ENDPOINT}/admin/logout`, {
+  fetch(`${REACT_APP_API_ENDPOINT}/admin/logout`, {
     method: "DELETE",
     credentials: 'include'
   })
 );
 
 export const checkLoggedIn = async () => {
-  const response = await fetch(`${API_ENDPOINT}/admin/auth`, {
+  const response = await fetch(`${REACT_APP_API_ENDPOINT}/admin/auth`, {
     credentials: 'include'
   });
 
