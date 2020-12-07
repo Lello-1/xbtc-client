@@ -2,8 +2,18 @@ import './AdminDashboard.css';
 import Sidebar from '../../components/Sidebar';
 import DashboardBar from '../../components/Dashboard-Bar';
 import DashboardPackage from '../../components/Dashboard-Package-Bar/DashboardPackage';
+import { connect } from "react-redux";
+import { logout } from "../../actions/session";
 import data from '../../mock-data/admin-dashboard-data';
 import packageData from '../../mock-data/package-data';
+
+const mapStateToProps = ({ session }) => ({
+  session
+});
+
+const mapDispatchToProps = dispatch => ({
+  logout: () => dispatch(logout())
+});
 
 const AdminDashboard = () => {
 
@@ -33,4 +43,7 @@ const AdminDashboard = () => {
   );
 }
 
-export default AdminDashboard;
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(AdminDashboard);

@@ -1,13 +1,18 @@
 import './Header.css';
 import Bell from 'react-bell-icon';
+import { connect } from "react-redux";
 import { Link } from 'react-router-dom';
 import React from 'react';
 import userList from '../../mock-data/user-list';
 import DropdownItem from '../Dropdown-Item';
 
+const mapStateToProps = ({ session }) => ({
+  session
+});
+
 class Header extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
     this.state = {
       users: userList,
@@ -76,8 +81,18 @@ class Header extends React.Component {
         </div> : null }
 
         <div className="darkest">
-          <div className="users_dropdown" onClick={this.toggleUserList} ><strong>{this.state.userAmount}</strong> USERS</div>
-          <div className="header_welcome">Deon Benade</div>
+
+        {this.props.session.firstname
+        ? <div className="users_dropdown" onClick={this.toggleUserList} >
+          <strong>{this.state.userAmount}</strong> USERS
+        </div>
+        : null}
+          
+          <div className="header_welcome">{
+            this.props.session.firstname
+            ? this.props.session.firstname + ' ' + this.props.session.lastname
+            : ''
+          }</div>
         </div>
   
         <div className="darker">
@@ -96,15 +111,18 @@ class Header extends React.Component {
         </div>
   
         <div className="dark">
-          <Link to="/admin/notification">
-            <Bell color="#fff" active={false} animate={false} style={{
-              transform: "skew(-52deg)",
-              position: "absolute",
-              top: "26%",
-              right: "10%",
-              width: "10%"
-            }} />
-          </Link>
+          {this.props.session.firstname
+          ? <Link to="/admin/notification">
+              <Bell color="#fff" active={false} animate={false} style={{
+                transform: "skew(-52deg)",
+                position: "absolute",
+                top: "26%",
+                right: "10%",
+                width: "10%"
+              }} />
+            </Link>
+          : null}
+
         </div>
       </div>
     );
@@ -112,4 +130,4 @@ class Header extends React.Component {
   }
 }
 
-export default Header;
+export default connect(mapStateToProps)(Header);

@@ -25,6 +25,10 @@
   font-size: 1.7em;
 }
 
+.Sidebar .logout:hover {
+  cursor: pointer;
+}
+
 .Sidebar .dashboard_link img {
   color: white;
 }
