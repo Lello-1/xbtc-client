@@ -7,6 +7,7 @@ import configureStore from './store/store';
 import { Provider } from "react-redux";
 import { checkLoggedIn } from "./utils/session";
 
+const { REACT_APP_API_ENDPOINT, API_ENDPOINT } = process.env;
 const renderApp = preloadedState => {
   const store = configureStore(preloadedState);
 
@@ -19,6 +20,9 @@ const renderApp = preloadedState => {
     document.getElementById('root')
   );
 };
+
+console.log('REACT_APP_API_ENDPOINT: ', REACT_APP_API_ENDPOINT);
+console.log('API_ENDPOINT: ', API_ENDPOINT);
 
 (async () => renderApp(await checkLoggedIn()))();
 
