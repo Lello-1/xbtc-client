@@ -1,7 +1,5 @@
-const { REACT_APP_BASE_URL } = process.env;
-
 export const signup = admin => (
-  fetch(`${REACT_APP_BASE_URL}/admin/register`, {
+  fetch(`/admin/register`, {
     method: "POST",
     body: JSON.stringify(admin),
     credentials: 'include',
@@ -12,7 +10,7 @@ export const signup = admin => (
 );
 
 export const login = admin => (
-  fetch(`${REACT_APP_BASE_URL}/admin/login`, {
+  fetch(`/admin/login`, {
     method: "POST",
     body: JSON.stringify(admin),
     credentials: 'include',
@@ -23,14 +21,14 @@ export const login = admin => (
 );
 
 export const logout = () => (
-  fetch(`${REACT_APP_BASE_URL}/admin/logout`, {
+  fetch(`/admin/logout`, {
     method: "DELETE",
     credentials: 'include'
   })
 );
 
 export const checkLoggedIn = async () => {
-  const response = await fetch(`${REACT_APP_BASE_URL}/admin/auth`, {
+  const response = await fetch(`/admin/auth`, {
     credentials: 'include'
   });
 
