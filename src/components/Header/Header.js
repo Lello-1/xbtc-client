@@ -15,13 +15,31 @@ class Header extends React.Component {
     super(props);
 
     this.state = {
-      users: userList,
-      userAmount: userList.length,
+      users: [],
+      userAmount: 0,
       isExpanded: false
     }
 
     this.toggleUserList = this.toggleUserList.bind(this);
     this.removeUserList = this.removeUserList.bind(this);
+  }
+
+
+  componentDidMount() {
+    const options = {
+      method: 'GET',
+      credentials: 'include',
+      headers: {
+        'Content-Type': 'Application/JSON'
+      }
+    }
+
+    fetch('/admin/get-users', options)
+      .then((res) => res.json())
+      .then((res) => {
+        console.log(res.mappedData);
+        this.setState({ users: res.mappedData, userAmount: res.mappedData.length });
+      });
   }
 
   toggleUserList() {

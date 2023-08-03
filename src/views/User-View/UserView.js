@@ -11,6 +11,22 @@ class UserView extends React.Component {
 
   }
 
+  componentDidMount() {
+    const options = {
+      method: 'GET',
+      credentials: 'include',
+      headers: {
+        'Content-Type': 'Application/JSON'
+      }
+    }
+
+    fetch('/admin/user-view', options)
+    .then((res) => res.json())
+    .then((res) => {
+      console.log(res);
+    });
+  }
+
   render() {
 
     return (

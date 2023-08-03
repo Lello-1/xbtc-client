@@ -14,7 +14,7 @@ const Sidebar = ({ dashboard, transactions, mastersheet, logout }) => {
   return (
     <div className="Sidebar">
       <a className={`dashboard_link ${dashboard}`} href="/admin/dashboard">Dashboard</a>
-      <a className={`${mastersheet}`} href="/admin/mastersheet">Mastersheet</a>
+      <a className={`${mastersheet}`} href="/admin/central-control-page">Central-Control</a>
       <a className={`${transactions}`} href="/admin/transactions">Transactions</a>
       <a className="logout" onClick={logout}>Logout</a>
 

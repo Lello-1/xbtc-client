@@ -10,7 +10,7 @@ import AdminDashboard from '../Admin-Dashboard';
 import Notification from '../Notifications';
 import Transactions from '../Transactions';
 import UserView from '../User-View';
-import Mastersheet from '../Mastersheet/Mastersheet';
+import CCU from '../Central-Control-Page/Central-Control-Page';
 import SignUp from '../Sign-Up/SignUp';
 import { AuthRoute, ProtectedRoute } from "../../utils/route";
 
@@ -21,7 +21,7 @@ const App = () => {
       <Router>
         <Header />
         <Switch>
-          <ProtectedRoute exact path="/admin/mastersheet" component={Mastersheet} />
+          <ProtectedRoute exact path="/admin/central-control-page" component={CCU} />
           <ProtectedRoute exact path="/admin/transactions" component={Transactions} />
           <ProtectedRoute exact path="/admin/notification" component={Notification} />
           <AuthRoute exact path="/admin/signup" component={SignUp} />
